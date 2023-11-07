@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max_width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* support section styling */
+
+.support-container {
+    background: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.support-container i {
+    padding: 2px;
+}
+
+/* navbar section styling */
+.navbar {
+    position: sticky;
+    top: 5px;
+    width: 100%;
+    z-index: 999999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background-color: white;
+}
+
+.navbar .max_width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: crimson;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: crimson;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: black;
+}
+
+/* menu-btn  styling*/
+.menu-btn {
+    color: crimson;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-button {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.scroll-up-button.show {
+    opacity: 1;
+    bottom: 30px;
+    pointer-events: auto;
+}
+
+/* home section styling */
+
+.home {
+    display: flex;
+    background: url("./images/bg.jpeg") no-repeat center;
+    /* height: 100vh; */
+    color: black;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max_width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text_1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: crimson;
+    padding-bottom: 10px;
+}
+
+.home .home-content .text_2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: -3px;
+    color: crimson;
+    padding-bottom: 10px;
+}
+
+.home .home-content .text_3 {
+    font-size: 16px;
+    margin: 5px 0;
+    padding-bottom: 10px;
+}
+
+.home .home-content .text_4 {
+    font-size: 20px;
+    margin: 5px 0;
+    padding-bottom: 10px;
+}
+
+.home .home-content .text_3 p {
+    padding: 5px;
+}
+
+
+.home .home-content a {
+    display: inline-block;
+    background: yellow;
+    color: black;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid yellow;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+    color: yellow;
+    background: none;
+}
+
+.need {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 150px;
+    align-items: center;
+    height: 120PX;
+    width: 800px;
+    border: 0.5px solid rgb(235, 228, 228);
+    border-radius: 6px;
+    box-shadow: 5px 15px 5px rgb(74, 73, 73);
+    margin-bottom: 50px;
+}
+
+.need h4 {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.need h5 {
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.talk {
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    border-color: crimson;
+    background: crimson;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(74, 73, 73);
+
+}
+
+.talk:hover {
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    border-color: black;
+    background: black;
+    color: white;
+}
+
+/* about section styling */
+
+
+
+/* .about .title::after{
+    content:"who i am";
+} */
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: crimson;
+}
+
+
+
+/* all similar content code styling */
+section {
+    padding: 100px 0;
+}
+
+.about,
+.services,
+.works,
+.skills,
+.contact,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.achieve-contant,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+/* service section styling */
+.services {
+    color: white;
+    background: black;
+}
+
+.services .serv-content .card {
+    width: calc(33% - 20px);
+    background: rgb(50, 50, 50);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.serv-content .card img {
+    height: 200px;
+    width: 280px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.services .serv-content .card:hover {
+    background: crimson;
+    color: black;
+}
+
+.services .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.services .serv-content .card i {
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i {
+    color: black;
+}
+
+.services .serv-content .card .text {
+    font-size: 25px;
+    font-family: 500;
+    font-weight: 900;
+    margin: 10px 0 7px 0;
+    color: crimson;
+}
+
+.services .serv-content .card:hover .text {
+    color: black;
+}
+
+
+
+/* ------------------------------------------------------------ */
+
+.achive {
+    color: black;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.achive .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 220px;
+    height: 150px;
+    border: 1px solid crimson;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: crimson;
+    color: white;
+    box-shadow: 5px 10px 5px rgb(74, 73, 73);
+}
+
+.achive .card i {
+    font-size: 40px;
+    padding-bottom: 5px;
+}
+
+.achive .card h2 {
+    font-size: 30px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.achive .card h5 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.achive .card:hover {
+    background: black;
+    color: crimson;
+    border: none;
+}
+
+
+
+
+
+
+/* skills section styling */
+
+/* .skills .title::after{
+    content:"what i know"
+} */
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+}
+
+.skills .skills-content .left a {
+    display: inline-block;
+    background: yellow;
+    color: black;
+    font-size: 18px;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid yellow;
+    transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover {
+    color: yellow;
+    background: black;
+}
+
+.skills .box {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+
+}
+
+.skills .skills-content .right .info {
+    height: 80px;
+    width: 200px;
+    border: 0.5px solid crimson;
+    border-radius: 6px;
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: 5px 10px 5px rgb(74, 73, 73);
+}
+
+.skills .box i {
+    font-size: 30px;
+}
+
+.question {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+
+.question select {
+    width: 800px;
+    height: 50px;
+    background-color: crimson;
+    color: white;
+    border: 1px solid crimson;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: none;
+
+}
+
+.question .ans {
+    margin-top: 50px;
+}
+
+.question .content {
+    font-size: 0px;
+}
+
+
+.contactsection {
+    background: black;
+    color: white;
+
+}
+
+.contactcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 50px
+}
+
+.contactcontainer h2 {
+    font-size: 30px;
+    color: crimson;
+    padding-bottom: 20px;
+}
+
+.contactcontainer p {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.contactcontainer .social i {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    color: crimson;
+}
+
+.contactcontainer .social i:hover {
+    background: crimson;
+    color: white;
+}
+
+.reach {
+    margin-top: 50px;
+    height: 50px;
+    width: 150px;
+    background-color: crimson;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    border: none;
+}
+
+.reach:hover {
+    background: white;
+    color: crimson;
+
+}
+
+.contactcontainer p:hover {
+    color: crimson;
+}
+
+/* footer section styling */
+footer {
+    background: #191919;
+    ;
+    padding: 20px 23px;
+    color: white;
+    text-align: center;
+
+}
+
+footer a {
+    color: crimson;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* reponsive media Query start  */
+@media (max-width:1300px) {
+    .home .max_width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:1104px) {
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
+
+    }
+}
+
+
+@media (max-width:991px) {
+    .max_width {
+        padding: 0 50px;
+    }
+
+    .need {
+        display: none;
+    }
+}
+
+@media (max-width:947px) {
+    .max_width {
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0px;
+        font-size: 25px;
+    }
+
+    .home .home-content .text_1 {
+        font-size: 22px;
+    }
+
+    .home .home-content .text_2 {
+        font-size: 45px;
+    }
+
+    .home .home-content .text_3 {
+        font-size: 14px;
+    }
+
+    .home .home-content .text_4 {
+        font-size: 18px;
+    }
+
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .max_width {
+        max-width: 800px;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .services .serv-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .question select {
+        width: 600px;
+    }
+
+
+
+}
+
+@media (max-width:690px) {
+    .support-container {
+        font-size: 13px;
+    }
+
+    .max_width {
+        padding: 0 23px;
+    }
+
+    .home .home-content .text_1 {
+        font-size: 20px;
+    }
+
+    .home .home-content .text_2 {
+        font-size: 40px;
+    }
+
+    .home .home-content .text_3 {
+        font-size: 12px;
+    }
+
+    .home .home-content .text_4 {
+        font-size: 32px;
+    }
+
+    .home .home-content a {
+        font-size: 16px;
+    }
+
+    .services .serv-content .card {
+        width: 100%;
+    }
+
+    .question select {
+        width: 500px;
+    }
+}
+
+
+@media (max-width:500px) {
+
+    .support-container {
+        font-size: 9px;
+    }
+
+    .home .home-content .text_1 {
+        font-size: 18px;
+    }
+
+    .home .home-content .text_2 {
+        font-size: 38px;
+    }
+
+    .home .home-content .text_3 {
+        font-size: 12px;
+    }
+
+    .home .home-content .text_4 {
+        font-size: 14px;
+    }
+
+    .navbar .logo a {
+        font-size: 27px;
+    }
+
+    .skills .box {
+
+        gap: 10px;
+    }
+
+    .question select {
+        width: 300px;
+    }
+}
